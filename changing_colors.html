@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<title>Changing background color</title>
+	<meta  name="viewport" content="width= device-width, initial-scale=1">
+	<style type="text/css">
+		#msg
+		{
+			margin: auto;
+			text-align: center;
+			color: brown;
+			background-color: #E8E8E8;
+			font-size: 24px;
+			padding: 2px;
+			width: 70%;
+			border: 3px solid brown; 
+
+			
+		}
+	</style>
+</head>
+<body id="body">
+	<div >
+		<div id="msg"><h1>This page changes its background color every 5 seconds.</h1>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var body = document.getElementById('body');
+		
+		
+		setInterval(change, 5000);
+		function change()
+		{
+			var color= ["red", "green", "yellow", "cyan", "brown", "black", "burlywood", "cornsilk", "lavender", "lawngreen"]
+			var i;
+			
+			
+			
+				i=Math.floor(Math.random()*10)
+				document.body.style.backgroundColor=color[i];
+			
+		}
+		
+
+	</script>
+
+</body>
+</html>
